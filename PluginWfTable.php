@@ -1,5 +1,13 @@
 <?php
 class PluginWfTable{
+  /**
+   * 
+   */
+  function __construct($buto = false) {
+    if($buto){
+      wfPlugin::includeonce('wf/yml');
+    }
+  }
   public static function widget_render($data){
     echo 'Depricated widget...';
     return null;
