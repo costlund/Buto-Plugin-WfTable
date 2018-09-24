@@ -2,6 +2,7 @@
   type: table
   attribute:
     class: table table-condensed
+    style: style:table
     id: rs:id
   innerHTML:
     -

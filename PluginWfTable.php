@@ -62,15 +62,16 @@ class PluginWfTable{
     wfDocument::renderElement($element->get());
   }
   public static function widget_render_many($data){
+    $data = new PluginWfArray($data);
     /**
      * Element.
      */
     $wf_table = new PluginWfTable(true);
     $element = $wf_table->getElement('render_many');
+    $element->setByTag($data->get('data/style'), 'style');
     /**
      * Data.
      */
-    $data = new PluginWfArray($data);
     $rs = $data->get('data/rs');
     if(sizeof($rs)==0){
       $rs = array(array('.' => '.'));
