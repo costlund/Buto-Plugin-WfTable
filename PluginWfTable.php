@@ -47,6 +47,9 @@ class PluginWfTable{
      */
     $tr = array();
     foreach ($rs as $key => $value) {
+      if(is_array($value)){
+        continue;
+      }
       $tr[] = wfDocument::createHtmlElement('tr', array(
         wfDocument::createHtmlElement('th', $key),
         wfDocument::createHtmlElement('td', $value)
