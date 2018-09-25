@@ -48,7 +48,8 @@ class PluginWfTable{
     $tr = array();
     foreach ($rs as $key => $value) {
       if(is_array($value)){
-        continue;
+        $value = wfHelp::getYmlDump($value);
+        $value = str_replace("\n", "<br>", $value);
       }
       $tr[] = wfDocument::createHtmlElement('tr', array(
         wfDocument::createHtmlElement('th', $key),
