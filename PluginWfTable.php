@@ -81,31 +81,33 @@ class PluginWfTable{
      * Add data to element.
      */
     $th = array();
-    foreach ($rs as $key => $value) {
-      foreach ($value as $key2 => $value2) {
-        if($key2 == 'row_click'){
-          continue;
-        }
-        $th[] = wfDocument::createHtmlElement('th', $key2);
-      }
-      break;
-    }
     $tr = array();
-    foreach ($rs as $key => $value) {
-      $item = new PluginWfArray($value);
-      $attribute = array();
-      if($item->get('row_click')){
-        $attribute = array('onclick' => $item->get('row_click'));
-      }
-      
-      $td = array();
-      foreach ($value as $key2 => $value2) {
-        if($key2 == 'row_click'){
-          continue;
+    if(is_array(($rs))){
+      foreach ($rs as $key => $value) {
+        foreach ($value as $key2 => $value2) {
+          if($key2 == 'row_click'){
+            continue;
+          }
+          $th[] = wfDocument::createHtmlElement('th', $key2);
         }
-        $td[] = wfDocument::createHtmlElement('td', $value2);
+        break;
       }
-      $tr[] = wfDocument::createHtmlElement('tr', $td, $attribute);
+      foreach ($rs as $key => $value) {
+        $item = new PluginWfArray($value);
+        $attribute = array();
+        if($item->get('row_click')){
+          $attribute = array('onclick' => $item->get('row_click'));
+        }
+
+        $td = array();
+        foreach ($value as $key2 => $value2) {
+          if($key2 == 'row_click'){
+            continue;
+          }
+          $td[] = wfDocument::createHtmlElement('td', $value2);
+        }
+        $tr[] = wfDocument::createHtmlElement('tr', $td, $attribute);
+      }
     }
     /**
      * Datatable.
