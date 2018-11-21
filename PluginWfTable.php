@@ -69,7 +69,9 @@ class PluginWfTable{
      */
     $wf_table = new PluginWfTable(true);
     $element = $wf_table->getElement('render_many');
-    $element->setByTag($data->get('data/style'), 'style');
+    if($data->get('data/style')){
+      $element->setByTag($data->get('data/style'), 'style');
+    }
     /**
      * Data.
      */
