@@ -76,6 +76,17 @@ class PluginWfTable{
      * Data.
      */
     $rs = $data->get('data/rs');
+    $field = array();
+    if($data->get('data/field')){
+      $field = $data->get('data/field');
+    }else{
+      foreach ($rs as $key => $value) {
+        foreach ($value as $key2 => $value2) {
+          $field[$key2] = $key2;
+        }
+        break;
+      }
+    }
     if(sizeof($rs)==0){
       $rs = array(array('.' => '.'));
     }
@@ -85,28 +96,33 @@ class PluginWfTable{
     $th = array();
     $tr = array();
     if(is_array(($rs))){
-      foreach ($rs as $key => $value) {
-        foreach ($value as $key2 => $value2) {
-          if($key2 == 'row_click'){
-            continue;
-          }
-          $th[] = wfDocument::createHtmlElement('th', $key2);
+      /**
+       * Column name.
+       */
+      foreach ($field as $key => $value) {
+        if($key == 'row_click'){
+          continue;
         }
-        break;
+        $th[] = wfDocument::createHtmlElement('th', $value);
       }
+      /**
+       * Data.
+       */
       foreach ($rs as $key => $value) {
         $item = new PluginWfArray($value);
         $attribute = array();
         if($item->get('row_click')){
           $attribute = array('onclick' => $item->get('row_click'));
         }
-
         $td = array();
-        foreach ($value as $key2 => $value2) {
+        foreach ($field as $key2 => $value2) {
           if($key2 == 'row_click'){
             continue;
           }
-          $td[] = wfDocument::createHtmlElement('td', $value2);
+          if(!array_key_exists($key2, $value)){
+            continue;
+          }
+          $td[] = wfDocument::createHtmlElement('td', $value[$key2]);
         }
         $tr[] = wfDocument::createHtmlElement('tr', $td, $attribute);
       }
