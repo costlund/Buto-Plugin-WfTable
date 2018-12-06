@@ -8,25 +8,6 @@ class PluginWfTable{
       wfPlugin::includeonce('wf/yml');
     }
   }
-  public static function widget_render($data){
-    echo 'Depricated widget...';
-    return null;
-    $th = array();
-    foreach (wfArray::get($data, 'data/fields') as $key => $value) {
-      $th[] = wfDocument::createHtmlElement('th', $value);
-    }
-    $tr = array();
-    $tr[] = wfDocument::createHtmlElement('tr', $th);
-    foreach (wfArray::get($data, 'data/data') as $key => $value) {
-      $td = array();
-      foreach (wfArray::get($data, 'data/fields') as $key2 => $value2) {
-        $td[] = wfDocument::createHtmlElement('td', wfArray::get($value, $key2));
-      }
-      $tr[] = wfDocument::createHtmlElement('tr', $td, wfArray::get($value, 'attribute'));
-    }
-    $table = wfDocument::createHtmlElement('table', $tr, array('class' => 'table table-hover'));
-    wfDocument::renderElement(array($table));
-  }
   /**
    * Render table from rs where each value has one row with th and td.
    * @param Array $rs
@@ -53,7 +34,7 @@ class PluginWfTable{
       }
       $tr[] = wfDocument::createHtmlElement('tr', array(
         wfDocument::createHtmlElement('th', $key),
-        wfDocument::createHtmlElement('td', $value)
+        wfDocument::createHtmlElement('td', $value, array(), array('i18n' => $data->get('data/i18n')))
         ));
     }
     $element->setByTag(array('tr' => $tr));
@@ -122,7 +103,7 @@ class PluginWfTable{
           if(!array_key_exists($key2, $value)){
             continue;
           }
-          $td[] = wfDocument::createHtmlElement('td', $value[$key2]);
+          $td[] = wfDocument::createHtmlElement('td', $value[$key2], array(), array('i18n' => $data->get('data/i18n')));
         }
         $tr[] = wfDocument::createHtmlElement('tr', $td, $attribute);
       }

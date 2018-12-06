@@ -1,5 +1,8 @@
-version: '1.1'
+version: '1.2'
 history:
+  '1.2':
+    date: '2018-12-06'
+    description: Add param data/i18n to avoid translation.
   '1.1':
     date: '2018-12-04'
     description: Add support for fields in widget_render_many.
