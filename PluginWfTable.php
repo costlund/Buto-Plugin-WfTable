@@ -68,9 +68,6 @@ class PluginWfTable{
         break;
       }
     }
-    if(sizeof($rs)==0){
-      $rs = array(array('.' => '.'));
-    }
     /**
      * Add data to element.
      */
@@ -125,6 +122,12 @@ class PluginWfTable{
       $json = $element->get('1/data/data/json');
       $json = array_merge($json, $data->get('data/datatable/json'));
       $element->set('1/data/data/json', $json);
+    }
+    /**
+     * If no data we disable datatable to avoid Javascript error.
+     */
+    if(sizeof($rs)==0){
+      $datatable_disable = true;
     }
     /**
      * Set element.
