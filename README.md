@@ -4,7 +4,7 @@ Widgets to render array data in tables.
 
 
 Render data in table.
-Set data/i18n to avoid translation for tbody.
+Set data/i18n to avoid translation for tbody. Use param row_click to add javascript to tr tag.
 
 ```
 type: widget
@@ -17,11 +17,11 @@ data:
       -
         x: 1
         y: 2
-        z: 3
+        row_click: alert('clicked')
       -
         x: 11
         y: 22
-        z: 33
+        row_click: alert('clicked')
     field:
       x: Letter X
       z: Zzz
