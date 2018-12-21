@@ -88,9 +88,11 @@ class PluginWfTable{
        */
       foreach ($rs as $key => $value) {
         $item = new PluginWfArray($value);
-        $attribute = array();
+        $attribute = new PluginWfArray();
         if($item->get('row_click')){
-          $attribute = array('onclick' => $item->get('row_click'));
+          $attribute->set('onclick', $item->get('row_click'));
+        }else{
+          $attribute->set('style', 'cursor:auto');
         }
         $td = array();
         foreach ($field as $key2 => $value2) {
@@ -102,7 +104,7 @@ class PluginWfTable{
           }
           $td[] = wfDocument::createHtmlElement('td', $value[$key2], array(), array('i18n' => $data->get('data/i18n')));
         }
-        $tr[] = wfDocument::createHtmlElement('tr', $td, $attribute);
+        $tr[] = wfDocument::createHtmlElement('tr', $td, $attribute->get());
       }
     }
     /**
