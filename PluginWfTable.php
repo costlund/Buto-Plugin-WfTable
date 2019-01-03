@@ -23,17 +23,24 @@ class PluginWfTable{
      */
     $data = new PluginWfArray($data);
     $rs = $data->get('data/rs');
+    $field = $data->get('data/field');
     /**
      * Add data to element.
      */
     $tr = array();
-    foreach ($rs as $key => $value) {
+    foreach ($rs as $key => $value){
+      $item = new PluginWfArray(array('label' => $key));
+      if($field && isset($field[$key])){
+        $item->set('label', $field[$key]);
+      }elseif($field && !isset($field[$key])){
+        continue;
+      }
       if(is_array($value)){
         $value = wfHelp::getYmlDump($value);
         $value = str_replace("\n", "<br>", $value);
       }
       $tr[] = wfDocument::createHtmlElement('tr', array(
-        wfDocument::createHtmlElement('th', $key),
+        wfDocument::createHtmlElement('th', $item->get('label')),
         wfDocument::createHtmlElement('td', $value, array(), array('i18n' => $data->get('data/i18n')))
         ));
     }
