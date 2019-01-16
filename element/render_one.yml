@@ -1,5 +1,10 @@
 -
-  type: table
+  type: div
   attribute:
-    class: table table-condensed
-  innerHTML: rs:tr
+    class: table-responsive
+  innerHTML:
+    -
+      type: table
+      attribute:
+        class: table table-condensed
+      innerHTML: rs:tr

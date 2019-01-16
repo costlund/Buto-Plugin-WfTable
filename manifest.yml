@@ -1,5 +1,8 @@
-version: '1.5'
+version: '1.6'
 history:
+  '1.6':
+    date: '2019-01-16'
+    description: Add bootstrap responsive div around table.
   '1.5':
     date: '2019-01-03'
     description: Add support for fields in widget_render_one.
