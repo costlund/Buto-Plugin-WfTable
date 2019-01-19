@@ -28,6 +28,9 @@ class PluginWfTable{
      * Add data to element.
      */
     $tr = array();
+    if(!$rs){
+      $rs = array('' => '');
+    }
     foreach ($rs as $key => $value){
       $item = new PluginWfArray(array('label' => $key));
       if($field && isset($field[$key])){
