@@ -120,17 +120,17 @@ class PluginWfTable{
     $datatable_disable = true;
     if($data->get('data/datatable/json')){
       $datatable_disable = false;
-      $json = $element->get('1/data/data/json');
+      $json = $element->get('0/innerHTML/1/data/data/json');
       $json = array_merge($json, $data->get('data/datatable/json'));
-      $element->set('1/data/data/json', $json);
+      $element->set('0/innerHTML/1/data/data/json', $json);
     }
     if($data->get('data/datatable/disabled') !== null){
       $datatable_disable = $data->get('data/datatable/disabled');
     }
     if($data->get('data/datatable/json')){
-      $json = $element->get('1/data/data/json');
+      $json = $element->get('0/innerHTML/1/data/data/json');
       $json = array_merge($json, $data->get('data/datatable/json'));
-      $element->set('1/data/data/json', $json);
+      $element->set('0/innerHTML/1/data/data/json', $json);
     }
     /**
      * If no data we disable datatable to avoid Javascript error.
