@@ -63,6 +63,9 @@ class PluginWfTable{
     if($data->get('data/style')){
       $element->setByTag($data->get('data/style'), 'style');
     }
+    if(!$data->get('data/id')){
+      $data->set('data/id', wfCrypt::getUid());
+    }
     /**
      * Data.
      */
@@ -144,7 +147,7 @@ class PluginWfTable{
     /**
      * Set element.
      */
-    $element->setByTag(array('thead_tr' => $th, 'tbody' => $tr, 'id' => wfCrypt::getUid(), 'datatable' => $datatable_disable));
+    $element->setByTag(array('thead_tr' => $th, 'tbody' => $tr, 'id' => $data->get('data/id'), 'datatable' => $datatable_disable));
     /**
      * Render.
      */
