@@ -2,6 +2,7 @@
   type: div
   attribute:
     class: table-responsive
+    style: 'min-height:100px'
   innerHTML:
     -
       type: table
