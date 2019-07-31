@@ -1,5 +1,8 @@
-version: '1.7'
+version: '1.7.1'
 history:
+  '1.7.1':
+    date: '2019-07-31'
+    description: Bug when no fields is provided in widget_render_one.
   '1.7':
     date: '2019-07-31'
     description: Order fields by fields registration instead of data in widget_render_one.

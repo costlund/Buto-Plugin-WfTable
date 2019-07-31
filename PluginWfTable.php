@@ -27,6 +27,18 @@ class PluginWfTable{
       $rs = array('' => '');
     }
     $field = $data->get('data/field');
+    /**
+     * Add field from rs if empty.
+     */
+    if(!$field){
+      $field = array();
+      foreach ($rs as $key => $value) {
+        $field[$key] = $key;
+      }
+    }
+    /**
+     * 
+     */
     $tr = array();
     foreach ($field as $key => $value){
       if(array_key_exists($key, $rs)){
