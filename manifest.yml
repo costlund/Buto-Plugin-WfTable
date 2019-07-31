@@ -1,5 +1,8 @@
-version: '1.6.2'
+version: '1.7'
 history:
+  '1.7':
+    date: '2019-07-31'
+    description: Order fields by fields registration instead of data in widget_render_one.
   '1.6.2':
     date: '2019-01-19'
     description: Bug when no data for method render_one.
@@ -30,7 +33,7 @@ history:
 plugin:
   -
     name: wf/yml
-    version: '1.0'
+    version: '1.1'
 sys:
   -
     name: mercury

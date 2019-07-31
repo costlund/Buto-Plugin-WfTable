@@ -23,30 +23,29 @@ class PluginWfTable{
      */
     $data = new PluginWfArray($data);
     $rs = $data->get('data/rs');
-    $field = $data->get('data/field');
-    /**
-     * Add data to element.
-     */
-    $tr = array();
     if(!$rs){
       $rs = array('' => '');
     }
-    foreach ($rs as $key => $value){
-      $item = new PluginWfArray(array('label' => $key));
-      if($field && isset($field[$key])){
-        $item->set('label', $field[$key]);
-      }elseif($field && !isset($field[$key])){
-        continue;
+    $field = $data->get('data/field');
+    $tr = array();
+    foreach ($field as $key => $value){
+      if(array_key_exists($key, $rs)){
+        $innerHTML = $rs[$key];
+      }else{
+        $innerHTML = "[key $key is missing]";
       }
-      if(is_array($value)){
-        $value = wfHelp::getYmlDump($value);
-        $value = str_replace("\n", "<br>", $value);
+      if(is_array($innerHTML)){
+        $innerHTML = wfHelp::getYmlDump($innerHTML);
+        $innerHTML = str_replace("\n", "<br>", $innerHTML);
       }
       $tr[] = wfDocument::createHtmlElement('tr', array(
-        wfDocument::createHtmlElement('th', $item->get('label')),
-        wfDocument::createHtmlElement('td', $value, array(), array('i18n' => $data->get('data/i18n')))
+        wfDocument::createHtmlElement('th', $value),
+        wfDocument::createHtmlElement('td', $innerHTML, array(), array('i18n' => $data->get('data/i18n')))
         ));
     }
+    /**
+     * Add tr to element.
+     */
     $element->setByTag(array('tr' => $tr));
     /**
      * Render.
