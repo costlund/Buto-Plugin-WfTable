@@ -8,7 +8,6 @@ Set data/i18n to avoid translation for tbody.
 Use param row_click to add javascript to tr tag.
 Use optional data/field to replace keys as labels.
 
-
 ## Render many
 
 ```
@@ -18,6 +17,16 @@ data:
   method: render_many
   data:
     i18n: false
+    field:
+      x: Letter X
+      z:
+        text: Letter Z
+        tr_attribute:
+          style: 'background:red'
+        th_attribute:
+          style: 'background:red'
+        td_attribute:
+          style: 'background:red'
     rs:
       -
         x: 1
@@ -27,9 +36,6 @@ data:
         x: 11
         y: 22
         row_click: alert('clicked')
-    field:
-      x: Letter X
-      z: Zzz
     datatable:
       disabled: false
 ```
@@ -43,12 +49,19 @@ data:
   method: render_one
   data:
     i18n: false
+    field:
+      x: X
+      y: Y
+      z:
+        text: Z
+        th_attribute:
+          style: 'background:red'
+        td_attribute:
+          style: 'background:red'
     rs:
       x: 1
       y: 2
       z: 3
-    field:
-      x: X
 ```
 
 

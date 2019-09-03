@@ -1,5 +1,8 @@
-version: '1.8'
+version: '1.9'
 history:
+  '1.9':
+    date: '2019-09-03'
+    description: Add attributes.
   '1.8':
     date: '2019-09-03'
     description: Render different datatable library depending on Bootstrap version 4 usage.
