@@ -1,5 +1,8 @@
-version: '1.7.1'
+version: '1.8'
 history:
+  '1.8':
+    date: '2019-09-03'
+    description: Render different datatable library depending on Bootstrap version 4 usage.
   '1.7.1':
     date: '2019-07-31'
     description: Bug when no fields is provided in widget_render_one.
@@ -37,6 +40,12 @@ plugin:
   -
     name: wf/yml
     version: '1.1'
+  -
+    name: datatable/datatable_1_10_16
+    version: '1.1'
+  -
+    name: datatable/datatable_1_10_18
+    version: '1.0'
 sys:
   -
     name: mercury

@@ -8,6 +8,9 @@ Set data/i18n to avoid translation for tbody.
 Use param row_click to add javascript to tr tag.
 Use optional data/field to replace keys as labels.
 
+
+## Render many
+
 ```
 type: widget
 data:
@@ -31,6 +34,7 @@ data:
       disabled: false
 ```
 
+## Render one
 
 ```
 type: widget

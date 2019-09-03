@@ -124,9 +124,9 @@ class PluginWfTable{
             continue;
           }
           if(!array_key_exists($key2, $value)){
-            continue;
+            //continue;
           }
-          $td[] = wfDocument::createHtmlElement('td', $value[$key2], array(), array('i18n' => $data->get('data/i18n')));
+          $td[] = wfDocument::createHtmlElement('td', $item->get($key2), array(), array('i18n' => $data->get('data/i18n')));
         }
         $tr[] = wfDocument::createHtmlElement('tr', $td, $attribute->get());
       }

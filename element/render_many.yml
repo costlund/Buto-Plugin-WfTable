@@ -21,24 +21,55 @@
           type: tbody
           innerHTML: rs:tbody
     -
-      type: widget
+      type: div
       settings:
-        disabled: rs:datatable
-      data:
-        plugin: datatable/datatable_1_10_16
-        method: run
-        data:
-          id: rs:id
-          json:
-            paging: true
-            ordering: true
-            info: true
-            searching: true
-            order:
-              -
-                - 0
-                - desc
-            language:
-              url: /plugin/datatable/datatable_1_10_13/i18n/Swedish.json
-              __url: //cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/German.json  
+        disabled: globals:_SESSION/plugin/twitter/bootstrap413v/include
+      innerHTML: 
+        -
+          type: widget
+          settings:
+            disabled: rs:datatable
+          data:
+            plugin: datatable/datatable_1_10_16
+            method: run
+            data:
+              id: rs:id
+              json:
+                paging: true
+                ordering: true
+                info: true
+                searching: true
+                order:
+                  -
+                    - 0
+                    - desc
+                language:
+                  url: /plugin/datatable/datatable_1_10_13/i18n/Swedish.json
+                  __url: //cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/German.json  
+    -
+      type: div
+      settings:
+        enabled: globals:_SESSION/plugin/twitter/bootstrap413v/include
+      innerHTML: 
+        -
+          type: widget
+          settings:
+            disabled: rs:datatable
+          data:
+            plugin: datatable/datatable_1_10_18
+            method: run
+            data:
+              id: rs:id
+              json:
+                paging: true
+                ordering: true
+                info: true
+                searching: true
+                order:
+                  -
+                    - 0
+                    - desc
+                language:
+                  url: /plugin/datatable/datatable_1_10_13/i18n/Swedish.json
+                  __url: //cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/German.json  
 
