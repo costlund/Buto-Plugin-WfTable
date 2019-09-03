@@ -6,6 +6,12 @@ class PluginWfTable{
   function __construct($buto = false) {
     if($buto){
       wfPlugin::includeonce('wf/yml');
+      $user = wfUser::getSession();
+      if($user->get('plugin/twitter/bootstrap413v/include')){
+        wfPlugin::enable('datatable/datatable_1_10_18');
+      }else{
+        wfPlugin::enable('datatable/datatable_1_10_16');
+      }
     }
   }
   /**
