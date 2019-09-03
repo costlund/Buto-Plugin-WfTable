@@ -48,7 +48,7 @@ class PluginWfTable{
       }
       if(is_array($innerHTML)){
         $innerHTML = wfHelp::getYmlDump($innerHTML);
-        $innerHTML = str_replace("\n", "<br>", $innerHTML);
+        $innerHTML = "<pre>$innerHTML</pre>";
       }
       $tr[] = wfDocument::createHtmlElement('tr', array(
         wfDocument::createHtmlElement('th', $value),
