@@ -27,6 +27,8 @@
       innerHTML: 
         -
           type: widget
+          attribute:
+            id: datatable_1_10_16
           settings:
             disabled: rs:datatable
           data:
@@ -53,6 +55,8 @@
       innerHTML: 
         -
           type: widget
+          attribute:
+            id: datatable_1_10_18
           settings:
             disabled: rs:datatable
           data:

@@ -3,11 +3,15 @@ class PluginWfTable{
   /**
    * 
    */
+  private $bootstrap_version = '4';
   function __construct($buto = false) {
     if($buto){
       wfPlugin::includeonce('wf/yml');
       $user = wfUser::getSession();
-      if($user->get('plugin/twitter/bootstrap413v/include')){
+      if(!$user->get('plugin/twitter/bootstrap413v/include')){
+        $this->bootstrap_version = '3';
+      }
+      if($this->bootstrap_version == '4'){
         wfPlugin::enable('datatable/datatable_1_10_18');
       }else{
         wfPlugin::enable('datatable/datatable_1_10_16');
@@ -150,19 +154,19 @@ class PluginWfTable{
      * Datatable.
      */
     $datatable_disable = true;
+    $id_hook = 'datatable_1_10_18';
+    $user = wfUser::getSession();
+    if(!$user->get('plugin/twitter/bootstrap413v/include')){
+      $id_hook = 'datatable_1_10_16';
+    }
     if($data->get('data/datatable/json')){
       $datatable_disable = false;
-      $json = $element->get('0/innerHTML/1/data/data/json');
+      $json = $element->getById($id_hook)->get('data/data/json');
       $json = array_merge($json, $data->get('data/datatable/json'));
-      $element->set('0/innerHTML/1/data/data/json', $json);
+      $element->setById($id_hook, 'data/data/json', $json);
     }
     if($data->get('data/datatable/disabled') !== null){
       $datatable_disable = $data->get('data/datatable/disabled');
-    }
-    if($data->get('data/datatable/json')){
-      $json = $element->get('0/innerHTML/1/data/data/json');
-      $json = array_merge($json, $data->get('data/datatable/json'));
-      $element->set('0/innerHTML/1/data/data/json', $json);
     }
     /**
      * If no data we disable datatable to avoid Javascript error.
