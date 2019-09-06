@@ -6,5 +6,5 @@
     -
       type: table
       attribute:
-        class: table table-condensed
+        class: class:table
       innerHTML: rs:tr

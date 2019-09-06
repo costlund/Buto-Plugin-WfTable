@@ -8,7 +8,18 @@ Set data/i18n to avoid translation for tbody.
 Use param row_click to add javascript to tr tag.
 Use optional data/field to replace keys as labels.
 
+## Class
+
+Set data/class/table to add more classes along with default table class.
+
+Bootstrap 4 classes.
+
+```
+table-sm table-striped table-dark table-bordered table-hover table-borderless
+```
+
 ## Render many
+
 
 ```
 type: widget
@@ -38,6 +49,8 @@ data:
         row_click: alert('clicked')
     datatable:
       disabled: false
+    class:
+      table: table-sm table-striped table-hover
 ```
 
 ## Render one
@@ -62,6 +75,8 @@ data:
       x: 1
       y: 2
       z: 3
+    class:
+      table: table-sm table-striped
 ```
 
 

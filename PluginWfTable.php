@@ -32,6 +32,8 @@ class PluginWfTable{
      * Data.
      */
     $data = new PluginWfArray($data);
+    $data->set('data/class/table', 'table '.$data->get('data/class/table'));
+    $element->setByTag($data->get('data/class'), 'class');
     $rs = $data->get('data/rs');
     if(!$rs){
       $rs = array('' => '');
@@ -80,11 +82,13 @@ class PluginWfTable{
   }
   public static function widget_render_many($data){
     $data = new PluginWfArray($data);
+    $data->set('data/class/table', 'table '.$data->get('data/class/table'));
     /**
      * Element.
      */
     $wf_table = new PluginWfTable(true);
     $element = $wf_table->getElement('render_many');
+    $element->setByTag($data->get('data/class'), 'class');
     if($data->get('data/style')){
       $element->setByTag($data->get('data/style'), 'style');
     }

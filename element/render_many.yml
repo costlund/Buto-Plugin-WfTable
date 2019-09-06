@@ -7,7 +7,7 @@
     -
       type: table
       attribute:
-        class: table table-condensed
+        class: class:table
         style: style:table
         id: rs:id
       innerHTML:
