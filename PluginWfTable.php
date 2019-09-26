@@ -149,6 +149,15 @@ class PluginWfTable{
           if(!array_key_exists($key2, $value)){
             //continue;
           }
+          /**
+           * Handle if array.
+           */
+          if(is_array($item->get($key2))){
+            $item->set($key2, '(Array)');
+          }
+          /**
+           * 
+           */
           $td[] = wfDocument::createHtmlElement('td', $item->get($key2), $i2->get('td_attribute'), array('i18n' => $data->get('data/i18n')));
         }
         $tr[] = wfDocument::createHtmlElement('tr', $td, $attribute->get());
