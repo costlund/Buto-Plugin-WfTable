@@ -47,11 +47,18 @@ data:
         x: 11
         y: 22
         row_click: alert('clicked')
+    element:
+      x:
+        -
+          type: span
+          innerHTML: wf_table:x
     datatable:
       disabled: false
     class:
       table: table-sm table-striped table-hover
 ```
+
+Use optional element param to render an element.
 
 ## Render one
 

@@ -156,6 +156,14 @@ class PluginWfTable{
             $item->set($key2, '(Array)');
           }
           /**
+           * Element
+           */
+          if($data->get("data/element/$key2")){
+            $data_element = new PluginWfArray($data->get("data/element/$key2"));
+            $data_element->setByTag($item->get(), 'wf_table');
+            $item->set($key2, $data_element->get());
+          }
+          /**
            * 
            */
           $td[] = wfDocument::createHtmlElement('td', $item->get($key2), $i2->get('td_attribute'), array('i18n' => $data->get('data/i18n')));

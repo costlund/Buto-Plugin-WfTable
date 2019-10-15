@@ -1,5 +1,8 @@
-version: '1.10'
+version: '1.11'
 history:
+  '1.11':
+    date: '2019-10-14'
+    description: Add param element to method render_many.
   '1.10':
     date: '2019-09-06'
     description: Add param to set table classes.
