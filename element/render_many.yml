@@ -76,4 +76,19 @@
                 language:
                   url: /plugin/datatable/datatable_1_10_13/i18n/Swedish.json
                   __url: //cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/German.json  
+                lengthMenu:
+                  -
+                    - 10
+                    - 25
+                    - 50
+                    - 100
+                    - 500
+                    - '-1'
+                  -
+                    - 10
+                    - 25
+                    - 50
+                    - 100
+                    - 500
+                    - All
 
