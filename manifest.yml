@@ -3,7 +3,7 @@ history:
   '1.12':
     date: '2019-10-18'
     title: Datatable
-    description: Add more option in Datatable to view more reckords.
+    description: Add more option in Datatable to view more records.
   '1.11':
     date: '2019-10-14'
     description: Add param element to method render_many.
