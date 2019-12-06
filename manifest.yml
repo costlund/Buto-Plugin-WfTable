@@ -1,52 +1,56 @@
-version: '1.12'
+version: '1.13.0'
 history:
-  '1.12':
+  '1.13.0':
+    date: '2019-12-06'
+    title: I18N
+    description: Wrong url to translation file.
+  '1.12.0':
     date: '2019-10-18'
     title: Datatable
     description: Add more option in Datatable to view more records.
-  '1.11':
+  '1.11.0':
     date: '2019-10-14'
     description: Add param element to method render_many.
-  '1.10':
+  '1.10.0':
     date: '2019-09-06'
     description: Add param to set table classes.
-  '1.9':
+  '1.9.0':
     date: '2019-09-03'
     description: Add attributes.
-  '1.8':
+  '1.8.0':
     date: '2019-09-03'
     description: Render different datatable library depending on Bootstrap version 4 usage.
-  '1.7.1':
+  '1.7.1.0':
     date: '2019-07-31'
     description: Bug when no fields is provided in widget_render_one.
-  '1.7':
+  '1.7.0':
     date: '2019-07-31'
     description: Order fields by fields registration instead of data in widget_render_one.
-  '1.6.2':
+  '1.6.2.0':
     date: '2019-01-19'
     description: Bug when no data for method render_one.
-  '1.6.1':
+  '1.6.1.0':
     date: '2019-01-19'
     description: Bug fix when render table with datatable params.
-  '1.6':
+  '1.6.0':
     date: '2019-01-16'
     description: Add bootstrap responsive div around table.
-  '1.5':
+  '1.5.0':
     date: '2019-01-03'
     description: Add support for fields in widget_render_one.
-  '1.4':
+  '1.4.0':
     date: '2018-12-21'
     description: Attribute fix in method render_many.
-  '1.3':
+  '1.3.0':
     date: '2018-12-12'
     description: Disable Datatable if no data in method render_many.
-  '1.2':
+  '1.2.0':
     date: '2018-12-06'
     description: Add param data/i18n to avoid translation.
-  '1.1':
+  '1.1.0':
     date: '2018-12-04'
     description: Add support for fields in widget_render_many.
-  '1.0':
+  '1.0.0':
     date: '2018-01-01'
     description: First version.
 plugin:
