@@ -135,10 +135,21 @@ class PluginWfTable{
       foreach ($rs as $key => $value) {
         $item = new PluginWfArray($value);
         $attribute = new PluginWfArray();
+        /**
+         * Row click
+         */
         if($item->get('row_click')){
           $attribute->set('onclick', $item->get('row_click'));
         }else{
           $attribute->set('style', 'cursor:auto');
+        }
+        /**
+         * Row id
+         */
+        if($item->get('row_id')){
+          $attribute->set('id', $item->get('row_id'));
+        }else{
+          $attribute->set('id', 'row_'.$key);
         }
         $td = array();
         foreach ($field as $key2 => $value2) {

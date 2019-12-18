@@ -43,10 +43,12 @@ data:
         x: 1
         y: 2
         row_click: alert('clicked')
+        row_id: row_1
       -
         x: 11
         y: 22
         row_click: alert('clicked')
+        row_id: row_2
     element:
       x:
         -
@@ -59,6 +61,16 @@ data:
 ```
 
 Use optional element param to render an element.
+
+### row_id
+Each tr tag in table a id attribute is added from rs param row_id. If not provided in rs parameter it will be each key in the array.
+
+#### Update cell
+```
+var tr = document.querySelector("#_my_table_id_ #row_1");
+tr.getElementsByTagName('td')[1].innerHTML='Zebra';
+```
+
 
 ## Render one
 

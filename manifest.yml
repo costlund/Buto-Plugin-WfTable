@@ -1,5 +1,9 @@
-version: '1.13.0'
+version: '1.14.0'
 history:
+  '1.14.0':
+    date: '2019-12-18'
+    title: Row id attribute
+    description: Row attribute id is added from param row_id.
   '1.13.0':
     date: '2019-12-06'
     title: I18N
