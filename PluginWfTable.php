@@ -154,6 +154,16 @@ class PluginWfTable{
         $td = array();
         foreach ($field as $key2 => $value2) {
           $i2 = new PluginWfArray($value2);
+          /**
+           * Attribute
+           */
+          $td_attribute = new PluginWfArray($i2->get('td_attribute'));
+          if(!$td_attribute->get('id')){
+            $td_attribute->set('id', $key2);
+          }
+          /**
+           * 
+           */
           if($key2 == 'row_click'){
             continue;
           }
@@ -177,7 +187,7 @@ class PluginWfTable{
           /**
            * 
            */
-          $td[] = wfDocument::createHtmlElement('td', $item->get($key2), $i2->get('td_attribute'), array('i18n' => $data->get('data/i18n')));
+          $td[] = wfDocument::createHtmlElement('td', $item->get($key2), $td_attribute->get(), array('i18n' => $data->get('data/i18n')));
         }
         $tr[] = wfDocument::createHtmlElement('tr', $td, $attribute->get());
       }

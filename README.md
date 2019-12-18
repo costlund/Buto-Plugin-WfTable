@@ -38,6 +38,7 @@ data:
           style: 'background:red'
         td_attribute:
           style: 'background:red'
+          id: _my_td_id_
     rs:
       -
         x: 1
@@ -62,13 +63,15 @@ data:
 
 Use optional element param to render an element.
 
-### row_id
-Each tr tag in table a id attribute is added from rs param row_id. If not provided in rs parameter it will be each key in the array.
+### TR attribute
+Each tr tag in table an id attribute is added from rs param row_id. If not provided in rs parameter it will be each key in the array.
+
+### TD attribute
+Attribute id is added to td element if not provided.
 
 #### Update cell
 ```
-var tr = document.querySelector("#_my_table_id_ #row_1");
-tr.getElementsByTagName('td')[1].innerHTML='Zebra';
+document.querySelector("#_my_table_id_ #row_1 #_my_td_id_").innerHTML='Zebra';
 ```
 
 
