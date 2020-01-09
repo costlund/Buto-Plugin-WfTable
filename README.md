@@ -57,6 +57,18 @@ data:
           innerHTML: wf_table:x
     datatable:
       disabled: false
+      json:
+        paging: true
+        iDisplayLength : 25
+        ordering: true
+        info: true
+        searching: true
+        order:
+          -
+            - 0
+            - desc
+        language:
+          url: /plugin/datatable/datatable_1_10_16/i18n/Swedish.json
     class:
       table: table-sm table-striped table-hover
 ```
@@ -73,6 +85,9 @@ Attribute id is added to td element if not provided.
 ```
 document.querySelector("#_my_table_id_ #row_1 #_my_td_id_").innerHTML='Zebra';
 ```
+
+### Datatable
+Datatable is loaded if param disabled is not true. One could use json param to modify how it behaves.
 
 
 ## Render one
