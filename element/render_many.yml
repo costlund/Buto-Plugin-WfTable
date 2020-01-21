@@ -44,7 +44,7 @@
                 order:
                   -
                     - 0
-                    - desc
+                    - asc
                 language:
                   url: /plugin/datatable/datatable_1_10_16/i18n/Swedish.json
                   __url: //cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/German.json  
@@ -72,7 +72,7 @@
                 order:
                   -
                     - 0
-                    - desc
+                    - asc
                 language:
                   url: /plugin/datatable/datatable_1_10_18/i18n/Swedish.json
                   __url: //cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/German.json  
@@ -91,4 +91,8 @@
                     - 100
                     - 500
                     - All
+                dom: "<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>><'row'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>><'row'<'col-sm-12 col-md-6'B>>"
+                buttons:
+                  - excel
+                  - pdf
 

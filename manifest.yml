@@ -1,5 +1,13 @@
-version: '1.14.1'
+version: '1.15.1'
 history:
+  '1.15.1':
+    date: '2020-01-21'
+    title: Table
+    description: Add pdf export button along with xls button below table. 
+  '1.15.0':
+    date: '2020-01-21'
+    title: Table
+    description: Order first column ascending as default.
   '1.14.1':
     date: '2019-12-18'
     title: Td id attribute
