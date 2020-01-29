@@ -1,5 +1,9 @@
-version: '1.15.1'
+version: '1.15.2'
 history:
+  '1.15.2':
+    date: '2020-01-21'
+    title: Table
+    description: Order first column descending as default.
   '1.15.1':
     date: '2020-01-21'
     title: Table
