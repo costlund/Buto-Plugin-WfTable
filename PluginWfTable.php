@@ -88,6 +88,28 @@ class PluginWfTable{
      */
     $wf_table = new PluginWfTable(true);
     $element = $wf_table->getElement('render_many');
+    /**
+     * Export
+     */
+    if($data->get('data/datatable/export/disabled')){
+      $element->setUnset('0/innerHTML/2/innerHTML/0/data/data/json/dom');
+      $element->setUnset('0/innerHTML/2/innerHTML/0/data/data/json/buttons');
+    }else{
+      if($data->get('data/datatable/export/title')){
+        $element->setByTag(array('title' => $data->get('data/datatable/export/title')), 'export');
+      }else{
+        $element->setByTag(array('title' => 'Data from '.wfSettings::getHttpAddress(true).' '.date('Y-m-d H:i:s').'.'), 'export');
+      }
+    }
+    /**
+     * Order
+     */
+    if($data->get('data/datatable/order')){
+      $element->set('0/innerHTML/2/innerHTML/0/data/data/json/order', $data->get('data/datatable/order'));
+    }
+    /**
+     * 
+     */
     $element->setByTag($data->get('data/class'), 'class');
     if($data->get('data/style')){
       $element->setByTag(array('table' => $data->get('data/style')), 'style');

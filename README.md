@@ -56,7 +56,20 @@ data:
           type: span
           innerHTML: wf_table:x
     datatable:
+      _disabled: Must be set to false to render Datatable.
       disabled: false
+      _export: If not json.
+      export:
+        _disabled: Set to true to not using export.
+        disabled: false
+        _title: Set a title to override plugin title.
+        title: My custom title.
+      _order: If not json.
+      order:
+        -
+          - 0
+          - desc
+      _json: Optional (check Datatable manual).
       json:
         paging: true
         iDisplayLength : 25
