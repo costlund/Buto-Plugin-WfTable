@@ -102,6 +102,12 @@ class PluginWfTable{
       }
     }
     /**
+     * searching
+     */
+    if($data->get('data/datatable/searching/disabled')){
+      $element->set('0/innerHTML/2/innerHTML/0/data/data/json/searching', false);
+    }
+    /**
      * Order
      */
     if($data->get('data/datatable/order')){

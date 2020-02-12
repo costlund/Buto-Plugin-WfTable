@@ -64,6 +64,8 @@ data:
         disabled: false
         _title: Set a title to override plugin title.
         title: My custom title.
+      searching:
+        _disabled: true
       _order: If not json.
       order:
         -

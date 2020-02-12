@@ -1,5 +1,9 @@
-version: '1.16.1'
+version: '1.16.2'
 history:
+  '1.16.2':
+    date: '2020-02-12'
+    title: Search param
+    description: Param to disable search field.
   '1.16.1':
     date: '2020-01-30'
     title: Sort table
