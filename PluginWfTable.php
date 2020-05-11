@@ -202,7 +202,7 @@ class PluginWfTable{
            * Handle if array.
            */
           if(is_array($item->get($key2))){
-            $item->set($key2, '(Array)');
+            $item->set($key2, $item->get($key2));
           }
           /**
            * Element
