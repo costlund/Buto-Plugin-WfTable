@@ -22,6 +22,9 @@
           innerHTML: rs:tbody
     -
       type: div
+      innerHTML: element:after
+    -
+      type: div
       settings:
         disabled: globals:_SESSION/plugin/twitter/bootstrap413v/include
       innerHTML: 

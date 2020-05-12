@@ -89,6 +89,10 @@ class PluginWfTable{
     $wf_table = new PluginWfTable(true);
     $element = $wf_table->getElement('render_many');
     /**
+     * Element after
+     */
+    $element->setByTag(array('after' => $data->get('data/element/after')), 'element');
+    /**
      * Export
      */
     if($data->get('data/datatable/export/disabled')){

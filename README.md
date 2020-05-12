@@ -86,6 +86,14 @@ data:
           url: /plugin/datatable/datatable_1_10_18/i18n/Swedish.json
     class:
       table: table-sm table-striped table-hover
+    element:
+      after:
+        -
+          type: div
+          attribute:
+            style: 
+              height: 70px
+          innerHTML:
 ```
 
 Use optional element param to render an element.
@@ -95,6 +103,10 @@ Each tr tag in table an id attribute is added from rs param row_id. If not provi
 
 ### TD attribute
 Attribute id is added to td element if not provided.
+
+### Element after
+Set param data/element/after to render element after table.
+
 
 #### Update cell
 ```
