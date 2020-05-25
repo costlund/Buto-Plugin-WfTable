@@ -98,6 +98,8 @@ class PluginWfTable{
     if($data->get('data/datatable/export/disabled')){
       $element->setUnset('0/innerHTML/2/innerHTML/0/data/data/json/dom');
       $element->setUnset('0/innerHTML/2/innerHTML/0/data/data/json/buttons');
+      $element->setUnset('0/innerHTML/3/innerHTML/0/data/data/json/dom');
+      $element->setUnset('0/innerHTML/3/innerHTML/0/data/data/json/buttons');
     }else{
       if($data->get('data/datatable/export/title')){
         $element->setByTag(array('title' => $data->get('data/datatable/export/title')), 'export');
@@ -110,12 +112,14 @@ class PluginWfTable{
      */
     if($data->get('data/datatable/searching/disabled')){
       $element->set('0/innerHTML/2/innerHTML/0/data/data/json/searching', false);
+      $element->set('0/innerHTML/3/innerHTML/0/data/data/json/searching', false);
     }
     /**
      * Order
      */
     if($data->get('data/datatable/order')){
       $element->set('0/innerHTML/2/innerHTML/0/data/data/json/order', $data->get('data/datatable/order'));
+      $element->set('0/innerHTML/3/innerHTML/0/data/data/json/order', $data->get('data/datatable/order'));
     }
     /**
      * 

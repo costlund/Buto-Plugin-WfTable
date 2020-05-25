@@ -1,5 +1,9 @@
-version: '1.17.0'
+version: '1.17.1'
 history:
+  '1.17.1':
+    date: '2020-05-25'
+    title: Settings params
+    description: Some setting params was not applied to datatable/datatable_1_10_18 in widget_render_many.
   '1.17.0':
     date: '2020-05-12'
     title: Element after
