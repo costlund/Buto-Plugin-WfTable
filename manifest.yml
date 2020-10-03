@@ -1,5 +1,9 @@
-version: '1.18.0'
+version: '1.18.1'
 history:
+  '1.18.1':
+    date: '2020-10-03'
+    title: 'Row attribute'
+    description: 'Bug in row attribute when fields not set.'
   '1.18.0':
     date: '2020-10-03'
     title: 'Row attribute'

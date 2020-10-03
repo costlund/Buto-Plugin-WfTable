@@ -214,6 +214,9 @@ class PluginWfTable{
           if($key2 == 'row_click'){
             continue;
           }
+          if($key2 == 'row_attribute'){
+            continue;
+          }
           if(!array_key_exists($key2, $value)){
             //continue;
           }
