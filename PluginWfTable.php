@@ -159,6 +159,9 @@ class PluginWfTable{
         if($key == 'row_click'){
           continue;
         }
+        if($key == 'row_attribute'){
+          continue;
+        }
         $i = new PluginWfArray($value);
         if(is_array($i->get())){
           $value = $i->get('text');
@@ -180,6 +183,14 @@ class PluginWfTable{
           $attribute->set('style', 'cursor:auto');
         }
         /**
+         * Row attribute
+         */
+        if($item->get('row_attribute')){
+          foreach($item->get('row_attribute') as $k2 => $v2){
+            $attribute->set($k2, $v2);
+          }
+        }
+          /**
          * Row id
          */
         if($item->get('row_id')){

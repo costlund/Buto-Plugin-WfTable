@@ -1,5 +1,9 @@
-version: '1.17.1'
+version: '1.18.0'
 history:
+  '1.18.0':
+    date: '2020-10-03'
+    title: 'Row attribute'
+    description: 'Add param row_attribute to widget_render_many.'
   '1.17.1':
     date: '2020-05-25'
     title: Settings params

@@ -45,6 +45,8 @@ data:
         y: 2
         row_click: alert('clicked')
         row_id: row_1
+        row_attribute:
+          data-id: 1234
       -
         x: 11
         y: 22
