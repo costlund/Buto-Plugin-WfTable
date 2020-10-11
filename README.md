@@ -47,6 +47,8 @@ data:
         row_id: row_1
         row_attribute:
           data-id: 1234
+        row_settings:
+          enabled: true
       -
         x: 11
         y: 22
@@ -99,6 +101,9 @@ data:
 ```
 
 Use optional element param to render an element.
+
+### Row settings
+Using param row_settings to add it as element settings param.
 
 ### TR attribute
 Each tr tag in table an id attribute is added from rs param row_id. If not provided in rs parameter it will be each key in the array.

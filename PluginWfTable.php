@@ -159,7 +159,7 @@ class PluginWfTable{
         if($key == 'row_click'){
           continue;
         }
-        if($key == 'row_attribute'){
+        if($key == 'row_attribute' || $key == 'row_settings'){
           continue;
         }
         $i = new PluginWfArray($value);
@@ -190,7 +190,7 @@ class PluginWfTable{
             $attribute->set($k2, $v2);
           }
         }
-          /**
+        /**
          * Row id
          */
         if($item->get('row_id')){
@@ -214,7 +214,7 @@ class PluginWfTable{
           if($key2 == 'row_click'){
             continue;
           }
-          if($key2 == 'row_attribute'){
+          if($key2 == 'row_attribute' || $key == 'row_settings'){
             continue;
           }
           if(!array_key_exists($key2, $value)){
@@ -239,7 +239,10 @@ class PluginWfTable{
            */
           $td[] = wfDocument::createHtmlElement('td', $item->get($key2), $td_attribute->get(), array('i18n' => $data->get('data/i18n')));
         }
-        $tr[] = wfDocument::createHtmlElement('tr', $td, $attribute->get());
+        /**
+         * 
+         */
+        $tr[] = wfDocument::createHtmlElement('tr', $td, $attribute->get(), $item->get('row_settings'));
       }
     }
     /**

@@ -1,120 +1,124 @@
-version: '1.18.1'
+version: 1.19.0
 history:
-  '1.18.1':
+  1.19.0:
+    date: '2020-10-11'
+    title: 'Row settings'
+    description: 'Add param row_settings to widget_render_many.'
+  1.18.1:
     date: '2020-10-03'
     title: 'Row attribute'
     description: 'Bug in row attribute when fields not set.'
-  '1.18.0':
+  1.18.0:
     date: '2020-10-03'
     title: 'Row attribute'
     description: 'Add param row_attribute to widget_render_many.'
-  '1.17.1':
+  1.17.1:
     date: '2020-05-25'
-    title: Settings params
-    description: Some setting params was not applied to datatable/datatable_1_10_18 in widget_render_many.
-  '1.17.0':
+    title: 'Settings params'
+    description: 'Some setting params was not applied to datatable/datatable_1_10_18 in widget_render_many.'
+  1.17.0:
     date: '2020-05-12'
-    title: Element after
-    description: Render element after if param data/element/after is set.
-  '1.16.3':
+    title: 'Element after'
+    description: 'Render element after if param data/element/after is set.'
+  1.16.3:
     date: '2020-05-11'
-    title: Render element
-    description: Render element if value is array.
-  '1.16.2':
+    title: 'Render element'
+    description: 'Render element if value is array.'
+  1.16.2:
     date: '2020-02-12'
-    title: Search param
-    description: Param to disable search field.
-  '1.16.1':
+    title: 'Search param'
+    description: 'Param to disable search field.'
+  1.16.1:
     date: '2020-01-30'
-    title: Sort table
-    description: Default sort order is first column falling order. One could override this by the order param.
-  '1.16.0':
+    title: 'Sort table'
+    description: 'Default sort order is first column falling order. One could override this by the order param.'
+  1.16.0:
     date: '2020-01-30'
-    title: Export table
-    description: Add params to handel if export buttons should show up. Add param title to override plugin title.
-  '1.15.2':
+    title: 'Export table'
+    description: 'Add params to handel if export buttons should show up. Add param title to override plugin title.'
+  1.15.2:
     date: '2020-01-21'
     title: Table
-    description: Order first column descending as default.
-  '1.15.1':
+    description: 'Order first column descending as default.'
+  1.15.1:
     date: '2020-01-21'
     title: Table
-    description: Add pdf export button along with xls button below table. 
-  '1.15.0':
+    description: 'Add pdf export button along with xls button below table.'
+  1.15.0:
     date: '2020-01-21'
     title: Table
-    description: Order first column ascending as default.
-  '1.14.1':
+    description: 'Order first column ascending as default.'
+  1.14.1:
     date: '2019-12-18'
-    title: Td id attribute
-    description: Td attribute id is added.
-  '1.14.0':
+    title: 'Td id attribute'
+    description: 'Td attribute id is added.'
+  1.14.0:
     date: '2019-12-18'
-    title: Row id attribute
-    description: Row attribute id is added from param row_id.
-  '1.13.0':
+    title: 'Row id attribute'
+    description: 'Row attribute id is added from param row_id.'
+  1.13.0:
     date: '2019-12-06'
     title: I18N
-    description: Wrong url to translation file.
-  '1.12.0':
+    description: 'Wrong url to translation file.'
+  1.12.0:
     date: '2019-10-18'
     title: Datatable
-    description: Add more option in Datatable to view more records.
-  '1.11.0':
+    description: 'Add more option in Datatable to view more records.'
+  1.11.0:
     date: '2019-10-14'
-    description: Add param element to method render_many.
-  '1.10.0':
+    description: 'Add param element to method render_many.'
+  1.10.0:
     date: '2019-09-06'
-    description: Add param to set table classes.
-  '1.9.0':
+    description: 'Add param to set table classes.'
+  1.9.0:
     date: '2019-09-03'
-    description: Add attributes.
-  '1.8.0':
+    description: 'Add attributes.'
+  1.8.0:
     date: '2019-09-03'
-    description: Render different datatable library depending on Bootstrap version 4 usage.
-  '1.7.1.0':
+    description: 'Render different datatable library depending on Bootstrap version 4 usage.'
+  1.7.1.0:
     date: '2019-07-31'
-    description: Bug when no fields is provided in widget_render_one.
-  '1.7.0':
+    description: 'Bug when no fields is provided in widget_render_one.'
+  1.7.0:
     date: '2019-07-31'
-    description: Order fields by fields registration instead of data in widget_render_one.
-  '1.6.2.0':
+    description: 'Order fields by fields registration instead of data in widget_render_one.'
+  1.6.2.0:
     date: '2019-01-19'
-    description: Bug when no data for method render_one.
-  '1.6.1.0':
+    description: 'Bug when no data for method render_one.'
+  1.6.1.0:
     date: '2019-01-19'
-    description: Bug fix when render table with datatable params.
-  '1.6.0':
+    description: 'Bug fix when render table with datatable params.'
+  1.6.0:
     date: '2019-01-16'
-    description: Add bootstrap responsive div around table.
-  '1.5.0':
+    description: 'Add bootstrap responsive div around table.'
+  1.5.0:
     date: '2019-01-03'
-    description: Add support for fields in widget_render_one.
-  '1.4.0':
+    description: 'Add support for fields in widget_render_one.'
+  1.4.0:
     date: '2018-12-21'
-    description: Attribute fix in method render_many.
-  '1.3.0':
+    description: 'Attribute fix in method render_many.'
+  1.3.0:
     date: '2018-12-12'
-    description: Disable Datatable if no data in method render_many.
-  '1.2.0':
+    description: 'Disable Datatable if no data in method render_many.'
+  1.2.0:
     date: '2018-12-06'
-    description: Add param data/i18n to avoid translation.
-  '1.1.0':
+    description: 'Add param data/i18n to avoid translation.'
+  1.1.0:
     date: '2018-12-04'
-    description: Add support for fields in widget_render_many.
-  '1.0.0':
+    description: 'Add support for fields in widget_render_many.'
+  1.0.0:
     date: '2018-01-01'
-    description: First version.
+    description: 'First version.'
 plugin:
   -
     name: wf/yml
-    version: '1.1'
+    version: 1.2.2
   -
     name: datatable/datatable_1_10_16
     version: '1.1'
   -
     name: datatable/datatable_1_10_18
-    version: '1.0'
+    version: 1.4.1
 sys:
   -
     name: mercury
@@ -122,4 +126,3 @@ sys:
       - '1.0'
 php:
   - 7.0.10
- 
