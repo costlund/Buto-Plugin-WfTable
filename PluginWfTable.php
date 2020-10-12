@@ -80,6 +80,20 @@ class PluginWfTable{
      */
     wfDocument::renderElement($element->get());
   }
+  public static function arrange_array_keys($rs){
+    /**
+     * If first array key is zero we has to create new ones to make tr attribute id to work when using keys.
+     */
+    if(isset($rs[0]) && array_keys($rs)[0]==0){
+      $temp = array();
+      foreach($rs as $k => $v){
+        $temp[wfCrypt::getUid()] = $v;
+      }
+      $rs = $temp;
+      unset($temp);
+    }
+    return $rs;
+  }
   public static function widget_render_many($data){
     $data = new PluginWfArray($data);
     $data->set('data/class/table', 'table '.$data->get('data/class/table'));
@@ -135,6 +149,13 @@ class PluginWfTable{
      * Data.
      */
     $rs = $data->get('data/rs');
+    /**
+     * 
+     */
+    $rs = PluginWfTable::arrange_array_keys($rs);
+    /**
+     * 
+     */
     $field = array();
     if($data->get('data/field')){
       $field = $data->get('data/field');

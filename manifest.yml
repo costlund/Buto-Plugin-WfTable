@@ -1,5 +1,9 @@
-version: 1.19.0
+version: 1.19.1
 history:
+  1.19.1:
+    date: '2020-10-12'
+    title: 'Data keys'
+    description: 'Add new keys to data in widget_render_many if keys are not associative to prevent problem with jquery. This appears when usint tr attribute id from keys.'
   1.19.0:
     date: '2020-10-11'
     title: 'Row settings'
