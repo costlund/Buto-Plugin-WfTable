@@ -132,6 +132,7 @@ data:
   plugin: wf/table
   method: render_one
   data:
+    key_is_missing_alert: true
     i18n: false
     field:
       x: X

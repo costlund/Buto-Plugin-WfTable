@@ -29,7 +29,11 @@ class PluginWfTable{
     $wf_table = new PluginWfTable(true);
     $element = $wf_table->getElement('render_one');
     /**
-     * Data.
+     * Merge data.
+     */
+    $data['data'] = array_merge(array('key_is_missing_alert' => true), $data['data']);
+    /**
+     * Modify data.
      */
     $data = new PluginWfArray($data);
     $data->set('data/class/table', 'table '.$data->get('data/class/table'));
@@ -60,7 +64,11 @@ class PluginWfTable{
       if(array_key_exists($key, $rs)){
         $innerHTML = $rs[$key];
       }else{
-        $innerHTML = "[key $key is missing]";
+        if($data->get('data/key_is_missing_alert')){
+          $innerHTML = "[key $key is missing]";
+        }else{
+          $innerHTML = '';
+        }
       }
       if(is_array($innerHTML)){
         $innerHTML = wfHelp::getYmlDump($innerHTML);

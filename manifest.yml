@@ -1,5 +1,9 @@
-version: 1.19.1
+version: 1.20.0
 history:
+  1.20.0:
+    date: '2020-11-13'
+    title: 'Error text'
+    description: 'Add param data/key_is_missing_alert in method render_one to be able to control if error text will be showing if data key not exist.'
   1.19.1:
     date: '2020-10-12'
     title: 'Data keys'
