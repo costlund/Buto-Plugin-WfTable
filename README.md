@@ -114,6 +114,12 @@ Attribute id is added to td element if not provided.
 ### Element after
 Set param data/element/after to render element after table.
 
+### Known issues
+If param data/rs has array keys with slash (/) there will be extra rows added. Therefore one has to replace such content before.
+```
+wfPlugin::includeonce('wf/table');
+$rs = PluginWfTable::handle_array_keys($rs);
+```
 
 #### Update cell
 ```

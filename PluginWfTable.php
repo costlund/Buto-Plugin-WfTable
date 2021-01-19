@@ -102,6 +102,13 @@ class PluginWfTable{
     }
     return $rs;
   }
+  public static function handle_array_keys($rs){
+    $temp = array();
+    foreach($rs as $k => $v){
+      $temp[str_replace('/', '#', $k)] = $v;
+    }
+    return $temp;
+  }
   public static function widget_render_many($data){
     $data = new PluginWfArray($data);
     $data->set('data/class/table', 'table '.$data->get('data/class/table'));
