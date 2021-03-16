@@ -18,8 +18,33 @@ Bootstrap 4 classes.
 table-sm table-striped table-dark table-bordered table-hover table-borderless
 ```
 
-## Render many
+## Render many (ajax)
 
+```
+type: widget
+data:
+  plugin: wf/table
+  method: render_many
+  data:
+    id: _my_table_id_
+    class:
+      table: table-sm table-striped
+    field:
+      name: Name
+      city: City
+    datatable:
+      ajax: /city/data
+      order:
+        -
+          - 0
+          - asc
+```
+
+### Ajax data
+
+Check plugin DatatableDatatable_1_10_18 howto render json data. 
+
+## Render many (complete table)
 
 ```
 type: widget

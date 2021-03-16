@@ -1,5 +1,9 @@
-version: 1.21.0
+version: 1.22.0
 history:
+  1.22.0:
+    date: '2021-03-16'
+    title: 'Ajax'
+    description: 'Support ajax request with json data.'
   1.21.0:
     date: '2021-01-19'
     title: 'Array keys'

@@ -118,6 +118,14 @@ class PluginWfTable{
     $wf_table = new PluginWfTable(true);
     $element = $wf_table->getElement('render_many');
     /**
+     * Ajax
+     */
+    if($data->get('data/datatable/ajax')){
+      $element->setByTag(array('ajax' => $data->get('data/datatable/ajax')));
+    }else{
+      $element->setByTag(array('ajax' => ''));
+    }
+    /**
      * Element after
      */
     $element->setByTag(array('after' => $data->get('data/element/after')), 'element');
@@ -183,30 +191,44 @@ class PluginWfTable{
       }
     }
     /**
+     * columnDefs
+     */
+    if($data->get('data/datatable/ajax') && !$data->get('data/datatable/json/columnDefs')){
+      $temp = array();
+      $i = 0;
+      foreach($field as $k => $v){
+        $temp[] = array('targets' => $i, 'data' => $k);
+        $i++;
+      }
+      $data->set('data/datatable/json/columnDefs', $temp);
+      unset($temp);
+      unset($i);
+    }
+    /**
      * Add data to element.
      */
     $th = array();
     $tr = array();
-    if(is_array(($rs))){
-      /**
-       * Column name.
-       */
-      foreach ($field as $key => $value) {
-        if($key == 'row_click'){
-          continue;
-        }
-        if($key == 'row_attribute' || $key == 'row_settings'){
-          continue;
-        }
-        $i = new PluginWfArray($value);
-        if(is_array($i->get())){
-          $value = $i->get('text');
-        }
-        $th[] = wfDocument::createHtmlElement('th', $value, $i->get('th_attribute'));
+    /**
+     * Column name.
+     */
+    foreach ($field as $key => $value) {
+      if($key == 'row_click'){
+        continue;
       }
-      /**
-       * Data.
-       */
+      if($key == 'row_attribute' || $key == 'row_settings'){
+        continue;
+      }
+      $i = new PluginWfArray($value);
+      if(is_array($i->get())){
+        $value = $i->get('text');
+      }
+      $th[] = wfDocument::createHtmlElement('th', $value, $i->get('th_attribute'));
+    }
+    /**
+     * Data.
+     */
+    if(is_array(($rs))){
       foreach ($rs as $key => $value) {
         $item = new PluginWfArray($value);
         $attribute = new PluginWfArray();
@@ -304,6 +326,9 @@ class PluginWfTable{
      */
     if(sizeof($rs)==0){
       $datatable_disable = true;
+    }
+    if($data->get('data/datatable/ajax')){
+      $datatable_disable = false;
     }
     /**
      * Set element.

@@ -68,6 +68,7 @@
             data:
               id: rs:id
               json:
+                ajax: rs:ajax
                 paging: true
                 ordering: true
                 info: true
