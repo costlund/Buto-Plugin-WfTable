@@ -124,6 +124,37 @@ data:
               height: 70px
           innerHTML:
 ```
+Simplified data.
+```
+type: widget
+data:
+  plugin: wf/table
+  method: render_many
+  data:
+    i18n: false
+    field:
+      x: X
+      y: Y
+    rs:
+      -
+        x: 1
+        y: 2
+      -
+        x: 11
+        y: 22
+        row_click: alert('clicked')
+        row_id: row_2
+    datatable:
+      disabled: false
+      export:
+        disabled: false
+        title: My custom title.
+      searching:
+      order:
+        -
+          - 0
+          - desc
+```
 
 Use optional element param to render an element.
 

@@ -1,5 +1,9 @@
-version: 1.22.0
+version: 1.22.1
 history:
+  1.22.1:
+    date: '2021-04-12'
+    title: 'Readme'
+    description: 'Readme improvement.'
   1.22.0:
     date: '2021-03-16'
     title: 'Ajax'
