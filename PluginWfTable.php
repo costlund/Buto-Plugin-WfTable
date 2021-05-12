@@ -177,7 +177,17 @@ class PluginWfTable{
      */
     $rs = PluginWfTable::arrange_array_keys($rs);
     /**
-     * 
+     * Replace # to / in field keys.
+     */
+    if($data->get('data/field')){
+      $temp = array();
+      foreach($data->get('data/field') as $k => $v){
+        $temp[str_replace('#', '/', $k)] = $v;
+      }
+      $data->set("data/field", $temp);
+    }
+    /**
+     *
      */
     $field = array();
     if($data->get('data/field')){

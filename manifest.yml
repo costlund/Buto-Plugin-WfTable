@@ -1,5 +1,9 @@
-version: 1.22.1
+version: 1.23.0
 history:
+  1.23.0:
+    date: '2021-05-12'
+    title: 'Field'
+    description: 'Handle field keys in widget render_many. Replace # to /.'
   1.22.1:
     date: '2021-04-12'
     title: 'Readme'

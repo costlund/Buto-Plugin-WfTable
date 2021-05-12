@@ -176,6 +176,17 @@ If param data/rs has array keys with slash (/) there will be extra rows added. T
 wfPlugin::includeonce('wf/table');
 $rs = PluginWfTable::handle_array_keys($rs);
 ```
+If field keys has / there will be ussues. One has to replace them to #.
+```
+type: widget
+data:
+  plugin: wf/table
+  method: render_many
+  data:
+    field:
+      information#date: Date
+      track#code: Bana
+```
 
 #### Update cell
 ```
