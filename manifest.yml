@@ -1,5 +1,9 @@
-version: 1.23.0
+version: 1.24.0
 history:
+  1.24.0:
+    date: '2021-06-14'
+    title: 'Empty array'
+    description: 'Handle if variable not an array.'
   1.23.0:
     date: '2021-05-12'
     title: 'Field'

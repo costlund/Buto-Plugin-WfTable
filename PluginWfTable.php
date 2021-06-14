@@ -334,7 +334,7 @@ class PluginWfTable{
     /**
      * If no data we disable datatable to avoid Javascript error.
      */
-    if(sizeof($rs)==0){
+    if(is_array($rs) && sizeof($rs)==0){
       $datatable_disable = true;
     }
     if($data->get('data/datatable/ajax')){
