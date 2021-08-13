@@ -1,5 +1,9 @@
-version: 1.24.0
+version: 1.24.1
 history:
+  1.24.1:
+    date: '2021-08-13'
+    title: 'Width'
+    description: 'Set table width to 100% if no style is set.'
   1.24.0:
     date: '2021-06-14'
     title: 'Empty array'

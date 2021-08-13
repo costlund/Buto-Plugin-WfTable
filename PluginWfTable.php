@@ -164,7 +164,10 @@ class PluginWfTable{
     $element->setByTag($data->get('data/class'), 'class');
     if($data->get('data/style')){
       $element->setByTag(array('table' => $data->get('data/style')), 'style');
+    }else{
+      $element->setByTag(array('table' => 'width:100%'), 'style');
     }
+    //wfHelp::yml_dump($element, true);
     if(!$data->get('data/id')){
       $data->set('data/id', wfCrypt::getUid());
     }
