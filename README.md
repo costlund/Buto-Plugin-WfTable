@@ -5,6 +5,7 @@ Widgets to render array data in tables.
 
 Render data in table.
 Set data/i18n to avoid translation for tbody. 
+Set data/i18n_columns to avoid translation for columns. 
 Use param row_click to add javascript to tr tag.
 Use optional data/field to replace keys as labels.
 
@@ -53,6 +54,7 @@ data:
   method: render_many
   data:
     i18n: false
+    i18n_columns: true
     field:
       x: Letter X
       z:

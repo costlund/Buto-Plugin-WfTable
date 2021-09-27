@@ -1,5 +1,9 @@
-version: 1.24.1
+version: 1.25.0
 history:
+  1.25.0:
+    date: '2021-09-27'
+    title: 'Param i18n_columns'
+    description: 'Add param 118n_columns to handle if columns should be translated.'
   1.24.1:
     date: '2021-08-13'
     title: 'Width'

@@ -225,6 +225,7 @@ class PluginWfTable{
     /**
      * Column name.
      */
+    $column_settings = array('i18n' => $data->get('data/i18n_columns'));
     foreach ($field as $key => $value) {
       if($key == 'row_click'){
         continue;
@@ -236,7 +237,7 @@ class PluginWfTable{
       if(is_array($i->get())){
         $value = $i->get('text');
       }
-      $th[] = wfDocument::createHtmlElement('th', $value, $i->get('th_attribute'));
+      $th[] = wfDocument::createHtmlElement('th', $value, $i->get('th_attribute'), $column_settings);
     }
     /**
      * Data.
