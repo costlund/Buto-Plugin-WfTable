@@ -1,5 +1,9 @@
-version: 1.25.1
+version: 1.26.0
 history:
+  1.26.0:
+    date: '2021-11-04'
+    title: 'Collapse'
+    description: 'Add collapse date if data is an array in method render_one.'
   1.25.1:
     date: '2021-11-05'
     title: 'Settings'

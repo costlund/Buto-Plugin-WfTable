@@ -71,8 +71,7 @@ class PluginWfTable{
         }
       }
       if(is_array($innerHTML)){
-        $innerHTML = wfHelp::getYmlDump($innerHTML);
-        $innerHTML = "<pre>$innerHTML</pre>";
+        $innerHTML = "<a class='small' data-toggle='collapse' href='#collapse$key'>Data</a><pre id='collapse$key' class='collapse'>".wfHelp::getYmlDump($innerHTML)."</pre>";
       }
       $tr[] = wfDocument::createHtmlElement('tr', array(
         wfDocument::createHtmlElement('th', $value, $i->get('th_attribute')),
