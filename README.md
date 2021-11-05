@@ -158,6 +158,16 @@ data:
           - desc
 ```
 
+Add settings example.
+```
+    table:
+      settings:
+        globals:
+          -
+            path_to_key: 'settings/plugin/i18n/translate_v1/settings/path'
+            value: '/plugin/_/_/i18n'
+```
+
 Use optional element param to render an element.
 
 ### Row settings

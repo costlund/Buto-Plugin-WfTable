@@ -118,6 +118,10 @@ class PluginWfTable{
     $wf_table = new PluginWfTable(true);
     $element = $wf_table->getElement('render_many');
     /**
+     * Settings
+     */
+    $element->setByTag(array('settings' => $data->get('data/table/settings')), 'table');
+    /**
      * Ajax
      */
     if($data->get('data/datatable/ajax')){

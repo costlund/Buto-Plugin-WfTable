@@ -6,6 +6,7 @@
   innerHTML:
     -
       type: table
+      settings: table:settings
       attribute:
         class: class:table
         style: style:table

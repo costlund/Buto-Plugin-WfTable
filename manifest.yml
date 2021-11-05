@@ -1,5 +1,9 @@
-version: 1.25.0
+version: 1.25.1
 history:
+  1.25.1:
+    date: '2021-11-05'
+    title: 'Settings'
+    description: 'One could add table settings.'
   1.25.0:
     date: '2021-09-27'
     title: 'Param i18n_columns'
