@@ -45,6 +45,12 @@ data:
 
 Check plugin DatatableDatatable_1_10_18 howto render json data. 
 
+### Ajax url
+One could replacew request params like this exemple.
+```
+      ajax: /city/data/year/[year]
+```
+
 ## Render many (complete table)
 
 ```

@@ -124,6 +124,16 @@ class PluginWfTable{
      * Ajax
      */
     if($data->get('data/datatable/ajax')){
+      /**
+       */
+      $ajax = $data->get('data/datatable/ajax');
+      foreach(wfRequest::getAll() as $k => $v){
+        $ajax = str_replace('['.$k.']', $v, $ajax);
+      }
+      $data->set('data/datatable/ajax', $ajax);
+      unset($ajax);
+      /**
+       */
       $element->setByTag(array('ajax' => $data->get('data/datatable/ajax')));
     }else{
       $element->setByTag(array('ajax' => ''));
