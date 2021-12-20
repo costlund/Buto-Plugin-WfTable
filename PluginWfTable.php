@@ -223,7 +223,19 @@ class PluginWfTable{
       $temp = array();
       $i = 0;
       foreach($field as $k => $v){
-        $temp[] = array('targets' => $i, 'data' => $k);
+        /**
+         * visible
+         */
+        $visible = true;
+        if(is_array($v)){
+          if(isset($v['visible'])){
+            $visible = $v['visible'];
+          }
+        }
+        /**
+         * 
+         */
+        $temp[] = array('targets' => $i, 'data' => $k, 'visible' => $visible);
         $i++;
       }
       $data->set('data/datatable/json/columnDefs', $temp);

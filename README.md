@@ -40,6 +40,13 @@ data:
           - 0
           - asc
 ```
+Hide a column.
+```
+      name:
+        text: Name
+        visible: false
+```
+
 
 ### Ajax data
 

@@ -1,5 +1,9 @@
-version: 1.27.0
+version: 1.28.0
 history:
+  1.28.0:
+    date: '2021-12-21'
+    title: 'Hide column'
+    description: 'One could hide a column.'
   1.27.0:
     date: '2021-12-12'
     title: 'Ajax'
