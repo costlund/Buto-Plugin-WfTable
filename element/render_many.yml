@@ -70,6 +70,7 @@
               id: rs:id
               json:
                 ajax: rs:ajax
+                processing: true
                 paging: true
                 ordering: true
                 info: true

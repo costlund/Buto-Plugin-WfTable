@@ -117,6 +117,7 @@ data:
           - desc
       _json: Optional (check Datatable manual).
       json:
+        processing: true
         paging: true
         iDisplayLength : 25
         ordering: true

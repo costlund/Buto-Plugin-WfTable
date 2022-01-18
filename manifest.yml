@@ -1,5 +1,9 @@
-version: 1.28.0
+version: 1.28.1
 history:
+  1.28.1:
+    date: '2022-01-18'
+    title: 'Processing'
+    description: 'Add json value processing as default to true.'
   1.28.0:
     date: '2021-12-21'
     title: 'Hide column'
