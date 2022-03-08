@@ -180,7 +180,6 @@ class PluginWfTable{
     }else{
       $element->setByTag(array('table' => 'width:100%'), 'style');
     }
-    //wfHelp::yml_dump($element, true);
     if(!$data->get('data/id')){
       $data->set('data/id', wfCrypt::getUid());
     }
@@ -191,7 +190,9 @@ class PluginWfTable{
     /**
      * 
      */
-    $rs = PluginWfTable::arrange_array_keys($rs);
+    if(is_array(($rs))){
+      $rs = PluginWfTable::arrange_array_keys($rs);
+    }
     /**
      * Replace # to / in field keys.
      */
