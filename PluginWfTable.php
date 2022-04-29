@@ -57,9 +57,13 @@ class PluginWfTable{
      */
     $tr = array();
     foreach ($field as $key => $value){
+      $i18n = $data->get('data/i18n');
       $i = new PluginWfArray($value);
       if(is_array($i->get())){
         $value = $i->get('text');
+        if($i->is_set('i18n')){
+          $i18n = $i->get('i18n');
+        }
       }
       if(array_key_exists($key, $rs)){
         $innerHTML = $rs[$key];
@@ -75,7 +79,7 @@ class PluginWfTable{
       }
       $tr[] = wfDocument::createHtmlElement('tr', array(
         wfDocument::createHtmlElement('th', $value, $i->get('th_attribute')),
-        wfDocument::createHtmlElement('td', $innerHTML, $i->get('td_attribute'), array('i18n' => $data->get('data/i18n')))
+        wfDocument::createHtmlElement('td', $innerHTML, $i->get('td_attribute'), array('i18n' => $i18n))
         ), $i->get('tr_attribute'));
     }
     /**

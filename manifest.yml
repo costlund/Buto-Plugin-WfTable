@@ -1,5 +1,9 @@
-version: 1.28.2
+version: 1.29.0
 history:
+  1.29.0:
+    date: '2022-04-29'
+    title: 'I18N'
+    description: 'Handle i18n in widget render_one.'
   1.28.2:
     date: '2022-03-08'
     title: 'Field data'

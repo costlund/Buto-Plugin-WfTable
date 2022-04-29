@@ -238,6 +238,7 @@ data:
       y: Y
       z:
         text: Z
+        i18n: true
         th_attribute:
           style: 'background:red'
         td_attribute:
