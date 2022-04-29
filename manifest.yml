@@ -1,5 +1,9 @@
-version: 1.29.0
+version: 1.30.0
 history:
+  1.30.0:
+    date: '2022-04-29'
+    title: 'State'
+    description: 'Handle state in widget render_many.'
   1.29.0:
     date: '2022-04-29'
     title: 'I18N'

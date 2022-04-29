@@ -114,6 +114,7 @@ class PluginWfTable{
   }
   public static function widget_render_many($data){
     $data = new PluginWfArray($data);
+    $id_is_set = false;
     $data->set('data/class/table', 'table '.$data->get('data/class/table'));
     /**
      * Element.
@@ -186,6 +187,8 @@ class PluginWfTable{
     }
     if(!$data->get('data/id')){
       $data->set('data/id', wfCrypt::getUid());
+    }else{
+      $id_is_set = true;
     }
     /**
      * Data.
@@ -357,6 +360,9 @@ class PluginWfTable{
       $id_hook = 'datatable_1_10_16';
     }
     if($data->get('data/datatable/json')){
+      if(!$id_is_set){
+        $data->set('data/datatable/json/stateSave', false);
+      }
       $datatable_disable = false;
       $json = $element->getById($id_hook)->get('data/data/json');
       $json = array_merge($json, $data->get('data/datatable/json'));

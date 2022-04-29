@@ -75,6 +75,7 @@
                 ordering: true
                 info: true
                 searching: true
+                stateSave: true
                 order:
                   -
                     - 0
