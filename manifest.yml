@@ -1,5 +1,9 @@
-version: 1.31.0
+version: 1.31.1
 history:
+  1.31.1:
+    date: '2022-06-08'
+    title: Versions
+    description: 'Versions update.'
   1.31.0:
     date: '2022-06-08'
     title: I18N
@@ -194,7 +198,7 @@ plugin:
     version: '1.1'
   -
     name: datatable/datatable_1_10_18
-    version: 1.4.8
+    version: 1.5.0
 sys:
   -
     name: mercury
