@@ -1,5 +1,9 @@
-version: 1.30.1
+version: 1.31.0
 history:
+  1.31.0:
+    date: '2022-06-08'
+    title: I18N
+    description: 'Remove param language/url because it will be auto set in plugin datatable/datatable_1_10_18.'
   1.30.1:
     date: '2022-06-07'
     title: Versions

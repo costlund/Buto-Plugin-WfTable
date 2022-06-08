@@ -127,8 +127,6 @@ data:
           -
             - 0
             - desc
-        language:
-          url: /plugin/datatable/datatable_1_10_18/i18n/Swedish.json
     class:
       table: table-sm table-striped table-hover
     element:
