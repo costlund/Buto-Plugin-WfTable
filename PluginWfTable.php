@@ -385,6 +385,10 @@ class PluginWfTable{
      */
     $element->setByTag(array('thead_tr' => $th, 'tbody' => $tr, 'id' => $data->get('data/id'), 'datatable' => $datatable_disable));
     /**
+     * Cursor pointer.
+     */
+    $element->setByTag(array('cursor' => "$(document).ready(function () { $('#".$data->get('data/id')." tbody').css('cursor', 'pointer'); } )"), 'script');
+    /**
      * Render.
      */
     wfDocument::renderElement($element->get());
