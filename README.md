@@ -41,6 +41,7 @@ data:
           - asc
 ```
 Hide a column.
+Consider Local Storage when edit this.
 ```
       name:
         text: Name
