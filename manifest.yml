@@ -1,5 +1,9 @@
-version: 1.31.4
+version: 1.31.5
 history:
+  1.31.5:
+    date: '2022-10-03'
+    title: Cursor
+    description: 'One could set cursor.'
   1.31.4:
     date: '2022-09-27'
     title: Versions

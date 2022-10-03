@@ -114,6 +114,18 @@ class PluginWfTable{
   }
   public static function widget_render_many($data){
     $data = new PluginWfArray($data);
+    /**
+     * 
+     */
+    if(!$data->get('data/row/cursor')){
+      /**
+       * Should be set to pointer if click able row.
+       */
+      $data->set('data/row/cursor', 'default');
+    }
+    /**
+     * 
+     */
     $id_is_set = false;
     $data->set('data/class/table', 'table '.$data->get('data/class/table'));
     /**
@@ -387,7 +399,7 @@ class PluginWfTable{
     /**
      * Cursor pointer.
      */
-    $element->setByTag(array('cursor' => "$(document).ready(function () { $('#".$data->get('data/id')." tbody').css('cursor', 'pointer'); } )"), 'script');
+    $element->setByTag(array('cursor' => "$(document).ready(function () { $('#".$data->get('data/id')." tbody').css('cursor', '".$data->get('data/row/cursor')."'); } )"), 'script');
     /**
      * Render.
      */
