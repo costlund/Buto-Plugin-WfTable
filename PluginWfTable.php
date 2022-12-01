@@ -3,19 +3,10 @@ class PluginWfTable{
   /**
    * 
    */
-  private $bootstrap_version = '4';
   function __construct($buto = false) {
     if($buto){
       wfPlugin::includeonce('wf/yml');
-      $user = wfUser::getSession();
-      if(!$user->get('plugin/twitter/bootstrap413v/include')){
-        $this->bootstrap_version = '3';
-      }
-      if($this->bootstrap_version == '4'){
-        wfPlugin::enable('datatable/datatable_1_10_18');
-      }else{
-        wfPlugin::enable('datatable/datatable_1_10_16');
-      }
+      wfPlugin::enable('datatable/datatable_1_10_18');
     }
   }
   /**
@@ -367,10 +358,6 @@ class PluginWfTable{
      */
     $datatable_disable = true;
     $id_hook = 'datatable_1_10_18';
-    $user = wfUser::getSession();
-    if(!$user->get('plugin/twitter/bootstrap413v/include')){
-      $id_hook = 'datatable_1_10_16';
-    }
     if($data->get('data/datatable/json')){
       if(!$id_is_set){
         $data->set('data/datatable/json/stateSave', false);

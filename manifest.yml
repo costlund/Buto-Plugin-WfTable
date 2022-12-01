@@ -1,5 +1,9 @@
-version: 1.31.5
+version: 1.32.0
 history:
+  1.32.0:
+    date: '2022-11-30'
+    title: Datatable
+    description: 'Remove plugin datatable/datatable_1_10_16. Only plugin datatable/datatable_1_10_18 for now.'
   1.31.5:
     date: '2022-10-03'
     title: Cursor
@@ -209,9 +213,6 @@ plugin:
   -
     name: wf/yml
     version: 1.5.0
-  -
-    name: datatable/datatable_1_10_16
-    version: '1.1'
   -
     name: datatable/datatable_1_10_18
     version: 1.5.1

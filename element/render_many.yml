@@ -26,33 +26,6 @@
       innerHTML: element:after
     -
       type: div
-      settings:
-        disabled: globals:_SESSION/plugin/twitter/bootstrap413v/include
-      innerHTML: 
-        -
-          type: widget
-          attribute:
-            id: datatable_1_10_16
-          settings:
-            disabled: rs:datatable
-          data:
-            plugin: datatable/datatable_1_10_16
-            method: run
-            data:
-              id: rs:id
-              json:
-                paging: true
-                ordering: true
-                info: true
-                searching: true
-                order:
-                  -
-                    - 0
-                    - desc
-    -
-      type: div
-      settings:
-        enabled: globals:_SESSION/plugin/twitter/bootstrap413v/include
       innerHTML: 
         -
           type: widget
