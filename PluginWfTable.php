@@ -283,8 +283,6 @@ class PluginWfTable{
          */
         if($item->get('row_click')){
           $attribute->set('onclick', $item->get('row_click'));
-        }else{
-          $attribute->set('style', 'cursor:auto');
         }
         /**
          * Row attribute

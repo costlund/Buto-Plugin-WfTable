@@ -1,5 +1,9 @@
-version: 1.32.0
+version: 1.32.1
 history:
+  1.32.1:
+    date: '2022-12-05'
+    title: Row cursor
+    description: 'Remove set row cursor to auto if data is array.'
   1.32.0:
     date: '2022-11-30'
     title: Datatable
