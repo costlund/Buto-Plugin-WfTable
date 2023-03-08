@@ -1,5 +1,9 @@
-version: 1.32.1
+version: 1.33.0
 history:
+  1.33.0:
+    date: '2023-03-08'
+    title: Table style
+    description: 'Table style is always width 100% aling with custom settings.'
   1.32.1:
     date: '2022-12-05'
     title: Row cursor

@@ -176,14 +176,20 @@ class PluginWfTable{
       $element->set('0/innerHTML/2/innerHTML/0/data/data/json/order', $data->get('data/datatable/order'));
     }
     /**
-     * 
+     * class
      */
     $element->setByTag($data->get('data/class'), 'class');
+    /**
+     * style
+     */
+    $style = 'width:100%;';
     if($data->get('data/style')){
-      $element->setByTag(array('table' => $data->get('data/style')), 'style');
-    }else{
-      $element->setByTag(array('table' => 'width:100%'), 'style');
+      $style .= $data->get('data/style');
     }
+    $element->setByTag(array('table' => $style), 'style');
+    /**
+     * id
+     */
     if(!$data->get('data/id')){
       $data->set('data/id', wfCrypt::getUid());
     }else{

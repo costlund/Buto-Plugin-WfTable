@@ -183,6 +183,12 @@ Add settings example.
 
 Use optional element param to render an element.
 
+### Table style
+Add style to table.
+```
+    style: 'font-size:smaller;'
+```
+
 ### Row settings
 Using param row_settings to add it as element settings param.
 
