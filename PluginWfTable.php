@@ -7,6 +7,7 @@ class PluginWfTable{
     if($buto){
       wfPlugin::includeonce('wf/yml');
       wfPlugin::enable('datatable/datatable_1_10_18');
+      wfPlugin::enable('icons/bootstrap_v1_8_1');
     }
   }
   /**
@@ -66,7 +67,20 @@ class PluginWfTable{
         }
       }
       if(is_array($innerHTML)){
-        $innerHTML = "<a class='small' data-toggle='collapse' href='#collapse$key'>Data</a><pre id='collapse$key' class='collapse'>".wfHelp::getYmlDump($innerHTML)."</pre>";
+        /**
+         * onclick
+         */
+        $onclick = "if(this.getElementsByTagName('svg')[1].style.display=='none'){this.getElementsByTagName('svg')[0].style.display='none';this.getElementsByTagName('svg')[1].style.display='';}else{this.getElementsByTagName('svg')[0].style.display='';this.getElementsByTagName('svg')[1].style.display='none';};";
+        /**
+         * innerHTML
+         */
+        $innerHTML = array(
+          wfDocument::createHtmlElement('a', array(
+            wfDocument::createWidget('icons/bootstrap_v1_8_1', 'icon', array('icon' => 'arrow-right-circle')),
+            wfDocument::createWidget('icons/bootstrap_v1_8_1', 'icon', array('icon' => 'arrow-down-circle', 'style' => 'display:none'))
+          ), array('class' => 'small', 'data-toggle' => 'collapse', 'href' => "#collapse$key", 'onclick' => $onclick)),
+          wfDocument::createHtmlElement('pre', wfHelp::getYmlDump($innerHTML), array('id' => "collapse$key", 'class' => 'collapse'))
+        );
       }
       $tr[] = wfDocument::createHtmlElement('tr', array(
         wfDocument::createHtmlElement('th', $value, $i->get('th_attribute')),
