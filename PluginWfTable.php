@@ -198,7 +198,11 @@ class PluginWfTable{
      */
     $style = 'width:100%;';
     if($data->get('data/style')){
-      $style .= $data->get('data/style');
+      if(!is_array($data->get('data/style'))){
+        $style .= $data->get('data/style');
+      }else{
+        $style .= wfDocument::array_to_string($data->get('data/style'));
+      }
     }
     $element->setByTag(array('table' => $style), 'style');
     /**
