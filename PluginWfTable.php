@@ -78,7 +78,7 @@ class PluginWfTable{
           wfDocument::createHtmlElement('a', array(
             wfDocument::createWidget('icons/bootstrap_v1_8_1', 'icon', array('icon' => 'arrow-right-circle')),
             wfDocument::createWidget('icons/bootstrap_v1_8_1', 'icon', array('icon' => 'arrow-down-circle', 'style' => 'display:none'))
-          ), array('class' => 'small', 'data-toggle' => 'collapse', 'href' => "#collapse$key", 'onclick' => $onclick)),
+          ), array('class' => 'small', 'data-bs-toggle' => 'collapse', 'href' => "#collapse$key", 'onclick' => $onclick)),
           wfDocument::createHtmlElement('pre', wfHelp::getYmlDump($innerHTML), array('id' => "collapse$key", 'class' => 'collapse'))
         );
       }
