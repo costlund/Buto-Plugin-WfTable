@@ -65,7 +65,7 @@
                     - 100
                     - 500
                     - All
-                dom: "<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>><'row'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>><'row'<'col-sm-12 col-md-6'B>>"
+                dom: "<'row'<'col-sm-12 plugin_wf_table_margin_bottom col-md-6'l><'col-sm-12 col-md-6'f>><'row'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>><'row'<'col-sm-12 col-md-6'B>>"
                 buttons:
                   -
                     extend: excel
@@ -77,3 +77,6 @@
 -
   type: script
   innerHTML: script:cursor
+-
+  type: style
+  innerHTML: ".plugin_wf_table_margin_bottom{margin-bottom: 10px}"
