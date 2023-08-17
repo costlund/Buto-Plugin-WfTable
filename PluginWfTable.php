@@ -150,7 +150,7 @@ class PluginWfTable{
        */
       $ajax = $data->get('data/datatable/ajax');
       foreach(wfRequest::getAll() as $k => $v){
-        $ajax = str_replace('['.$k.']', $v, $ajax);
+        $ajax = wfPhpfunc::str_replace('['.$k.']', $v, $ajax);
       }
       $data->set('data/datatable/ajax', $ajax);
       unset($ajax);

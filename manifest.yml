@@ -1,5 +1,9 @@
-version: 1.34.1
+version: 1.35.0
 history:
+  1.35.0:
+    date: '2023-08-17'
+    title: 'PHP 8.2'
+    description: 'Changes according to PHP version 8.2.'
   1.34.1:
     date: '2023-05-24'
     title: Layout
@@ -10,7 +14,7 @@ history:
     description: 'Changes according to version 5 (apply to method widget_render_one only).'
   1.33.2:
     date: '2023-03-20'
-    title: Render many
+    title: 'Render many'
     description: 'Handle if param style is an array.'
   1.33.1:
     date: '2023-03-14'
@@ -18,11 +22,11 @@ history:
     description: 'Add icons in widget render_one.'
   1.33.0:
     date: '2023-03-08'
-    title: Table style
+    title: 'Table style'
     description: 'Table style is always width 100% aling with custom settings.'
   1.32.1:
     date: '2022-12-05'
-    title: Row cursor
+    title: 'Row cursor'
     description: 'Remove set row cursor to auto if data is array.'
   1.32.0:
     date: '2022-11-30'
