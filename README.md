@@ -35,6 +35,7 @@ data:
       city: City
     datatable:
       ajax: /city/data
+      onclick: console.log
       order:
         -
           - 0
@@ -57,6 +58,12 @@ Check plugin DatatableDatatable_1_10_18 howto render json data.
 One could replacew request params like this exemple.
 ```
       ajax: /city/data/year/[year]
+```
+
+### onclick
+If this is set row data will be passed into function.
+```
+      onclick: console.log
 ```
 
 ## Render many (complete table)

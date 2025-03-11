@@ -120,6 +120,17 @@ class PluginWfTable{
   public static function widget_render_many($data){
     $data = new PluginWfArray($data);
     /**
+     * id
+     */
+    $id_is_set = false;
+    if(!$data->get('data/id')){
+      $id = wfCrypt::getUid();
+      $data->set('data/id', $id);
+    }else{
+      $id = $data->get('data/id');
+      $id_is_set = true;
+    }
+    /**
      * 
      */
     if(!$data->get('data/row/cursor')){
@@ -131,7 +142,6 @@ class PluginWfTable{
     /**
      * 
      */
-    $id_is_set = false;
     $data->set('data/class/table', 'table '.$data->get('data/class/table'));
     /**
      * Element.
@@ -159,6 +169,15 @@ class PluginWfTable{
       $element->setByTag(array('ajax' => $data->get('data/datatable/ajax')));
     }else{
       $element->setByTag(array('ajax' => ''));
+    }
+    /**
+     * onclick
+     */
+    if($data->get('data/datatable/onclick')){
+      $onclick = $data->get('data/datatable/onclick');
+      $element->setByTag(array('script' => "$('#$id tbody').on( 'click', 'tr', function () { $onclick(datatable_$id.row(this).data());});"), 'onclick');
+    }else{
+      $element->setByTag(array('script' => null), 'onclick');
     }
     /**
      * Element after
@@ -205,14 +224,6 @@ class PluginWfTable{
       }
     }
     $element->setByTag(array('table' => $style), 'style');
-    /**
-     * id
-     */
-    if(!$data->get('data/id')){
-      $data->set('data/id', wfCrypt::getUid());
-    }else{
-      $id_is_set = true;
-    }
     /**
      * Data.
      */
