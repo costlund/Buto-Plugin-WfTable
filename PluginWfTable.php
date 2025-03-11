@@ -280,6 +280,7 @@ class PluginWfTable{
         $temp[] = array('targets' => $i, 'data' => $k, 'visible' => $visible);
         $i++;
       }
+      $temp[] = array('targets' => '_all', 'defaultContent' => '');
       $data->set('data/datatable/json/columnDefs', $temp);
       unset($temp);
       unset($i);

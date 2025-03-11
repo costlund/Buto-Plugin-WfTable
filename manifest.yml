@@ -1,5 +1,9 @@
-version: 1.35.2
+version: 1.35.3
 history:
+  1.35.3:
+    date: '2025-03-11'
+    title: Param not exist
+    description: 'Omit errors if param not exist in datatable ajax request.'
   1.35.2:
     date: '2025-03-11'
     title: Onclick
