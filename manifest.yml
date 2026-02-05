@@ -1,5 +1,9 @@
-version: 1.35.3
+version: 1.36.0
 history:
+  1.36.0:
+    date: '2026-02-05'
+    title: Ajax
+    description: 'Replace [class] with current request class.'
   1.35.3:
     date: '2025-03-11'
     title: Param not exist
