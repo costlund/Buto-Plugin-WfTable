@@ -247,6 +247,17 @@ class PluginWfTable{
       $data->set("data/field", $temp);
     }
     /**
+     * If field name is null.
+     * Set it to same as key.
+     */
+    if($data->get('data/field')){
+      foreach($data->get('data/field') as $k => $v){
+        if(is_null($v)){
+          $data->set("data/field/$k", $k);
+        }
+      }
+    }
+    /**
      *
      */
     $field = array();

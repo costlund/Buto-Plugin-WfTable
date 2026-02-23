@@ -1,5 +1,9 @@
-version: 1.36.0
+version: 1.37.0
 history:
+  1.37.0:
+    date: '2026-02-19'
+    title: Render many
+    description: 'If field name is null, it sets to key value.'
   1.36.0:
     date: '2026-02-05'
     title: Ajax
